@@ -1,8 +1,6 @@
-FROM ubuntu:18.04
- 
-LABEL maintainer="praveen kumar.Y"
- 
-# Install updates to base image
-RUN \
-  apt-get update -y \
-  && apt-get install -y 
+FROM ubuntu
+MAINTAINER easywhatis@gmail.com
+RUN apt-get update
+RUN apt-get install curl wget
+RUN apt-get install -y nginx
+CMD ["echo","Image created successfully"]
