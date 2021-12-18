@@ -1,4 +1,3 @@
-# Learn Terraform - Provision an EKS Cluster
+# Provision your Kubernetes clusters with the Terraform Helm provider
 
-This repo is a companion repo to the [Provision an EKS Cluster learn guide](https://learn.hashicorp.com/terraform/kubernetes/provision-eks-cluster), containing
-Terraform configuration files to provision an EKS cluster on AWS.
+This is a supplemental repository for the Helm provider tutorial. Follow along on [Learn](https://learn.hashicorp.com/tutorials/terraform/helm-provider?in=terraform/kubernetes)
