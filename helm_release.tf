@@ -10,17 +10,19 @@ provider "helm" {
   }
 }
 
-resource "helm_release" "kubewatch" {
-  name       = "kubewatch"
+resource "helm_release" "first-one" {
+  name       = "my-redis-release"
   repository = "https://charts.bitnami.com/bitnami"
-  chart      = "kubewatch"
+  chart      = "redis"
+  version    = "6.0.1"
+  
 
   values = [
-    file("${path.module}/kubewatch-values.yaml")
+    "${file("values.yaml")}"
   ]
 
-  set_sensitive {
-    name  = "slack.token"
-    value = var.slack_app_token
+  set{
+    name  = "cluster.enable"
+    value = "true"
   }
 }
